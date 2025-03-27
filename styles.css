@@ -1,0 +1,55 @@
+/* Custom styles to complement Tailwind */
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Section spacing */
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Navigation active state */
+nav a.active {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Form input focus state */
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
